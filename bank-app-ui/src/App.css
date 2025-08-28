@@ -1,0 +1,280 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f2f5;
+}
+
+.auth-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+}
+
+.auth-form h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.auth-form button:hover {
+  background-color: #0056b3;
+}
+
+.auth-form p {
+  margin-top: 1rem;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background: #f0f2f5;
+}
+
+.sidebar {
+  width: 250px;
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidebar.closed {
+  width: 50px;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.sidebar-content {
+  margin-top: 40px;
+}
+
+.Collapsible__trigger {
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  background: #444;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.Collapsible__contentInner {
+  padding: 10px;
+  background: #555;
+  border-radius: 5px;
+}
+
+.transaction-list {
+  list-style: none;
+  padding: 0;
+}
+
+.transaction-list li {
+  padding: 8px;
+  border-bottom: 1px solid #666;
+  font-size: 0.9rem;
+}
+
+.transaction-list li.debit {
+  color: #ff6b6b;
+}
+
+.transaction-list li.credit {
+  color: #6bff6b;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  margin: 0;
+  color: #333;
+}
+
+.balance-info {
+  text-align: right;
+}
+
+.balance-info p {
+  margin: 0;
+  color: #666;
+}
+
+.balance-info h3 {
+  margin: 5px 0 0;
+  color: #28a745;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+.dashboard-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.section {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.section form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.section form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chatbot-container {
+  margin-top: 2rem;
+}
+
+.chatbot-box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-area {
+  height: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  padding: 8px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  max-width: 70%;
+}
+
+.message.user {
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-end;
+}
+
+.message.bot {
+  background-color: #e2e2e2;
+  color: #333;
+  align-self: flex-start;
+}
+
+.chat-input-form {
+  display: flex;
+}
+
+.chat-input-form input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.chat-input-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
